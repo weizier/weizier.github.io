@@ -3,13 +3,16 @@ layout: page
 title: About
 permalink: /about/
 ---
-
-Some information about you!
+梦想着有一天成为真正的Geek!
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+Machine Learning sudoGeek!
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+Email:[xuweimdm@gmail.com](mailto:email@domain.com)
+
+GitHub:[weizier](https://github.com/weizier)
+
+Sina:[Mr许维](http://weibo.com/2053318977/ "http://weibo.com/2053318977/")
