@@ -27,7 +27,7 @@ title: hashTables
 
 #Class 1
 
-###Issues:
+###1.Issues:
 
 - Computing the hash function.
 - Equality test:Method for checking whether two keys are equal.
@@ -35,13 +35,13 @@ title: hashTables
 
 然后老师讲到hash table是典型的space-time tradeoff.现实情况中是不会有无限制的空间和时间的，只能在这两者之间进行折中。
 
-###Classic space-time tradeoff.
+###2.Classic space-time tradeoff.
 
 - No sapce limitation:trival hash function with key as index.
 - No time limitation:trival collision resolution with sequential search.
 - Space and time limitations:hashing(the real world),it means that we should find a suitable hash function and then handle the collision.
 
-###Computing the hash function
+###3.Computing the hash function
 
 **Idealistic goal.** Scramble the keys uniformly to produce a table index.
 
@@ -50,16 +50,16 @@ title: hashTables
 
 我个人的理解中，第一点无疑是为了节省计算hash function的时间。而第二点则是为了在一开始设定hash function的时候就尽量减少collision的可能性。比方说，如果hash出来的index某些值比另外一些值更有可能发生，那么这些更有可能产生的值就会更有可能出现collision的情况。
 
-###Java’s hash code conventions
+###4.Java’s hash code conventions
 
 All Java classes inherit a method hashCode(),which return a 32-bit int.一般默认的返回值是Memory address of x.但是对象为integer,string,char,double,file等等时，便有特殊的处理方式了。
 
 **Requirement**. If x.equals(y), then (x.hashCode() == y.hashCode()).
 
-*Highly desirable*. If !x.equals(y), then (x.hashCode() != y.hashCode()).
+**Highly desirable**. If !x.equals(y), then (x.hashCode() != y.hashCode()).
 
 也就是说，当两个对象相等时，要求其hashCode必须相等，这是必须的规定。并且尽量追求当两个对象不相等时，其hashCode不相等，但这并不是必须。这和我们找hash function是一个道理。因为一般情况下你无法避免collision。
 
-![Java hash code](./images/java_hash_code.jpg)
+![Java hash code](../images/java_hash_code.jpg)
 
 
