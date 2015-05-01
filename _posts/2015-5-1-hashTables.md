@@ -62,13 +62,13 @@ All Java classes inherit a method hashCode(),which return a 32-bit int.一般默
 
 ![Java hash code](../images/java_hash_code.jpg)
 
-![Customized hash code](../images/customized_hash_function.jpg)
+![Customized hash code](../images/customized_hash_function.JPG)
 
 ![Hashcode design rule](../images/hashcode_design_rule.JPG)
 
 这里有说到，将需要用到的每一个field用31x+y的形式连接起来，这点有些类似于上一张图。第二点，如果是基本类型的数据，则直接调用hashcode()函数，reference type的数据其实本质上有些类似于一个array，因而对其内每一个元素都用31x+y进行组合。
 
-下面讲到hash code和hash function.这里实际上将hashing这个过程分成两个不步骤，第一个步骤是hash code。也即是用一个32位的int类型数来代替原始数据，这也是上文讲到的hashCode()函数该干的事情。第二个步骤就是将上一步得到的32位int类型数进行映射到0~(M-1)的一个数，这个数就用来作为index。比如wikipedia里就有如下表述方式：
+下面讲到hash code和hash function.这里实际上将hashing这个过程分成两个步骤，第一个步骤是hash code。也即是用一个32位的int类型数来代替原始数据，这也是上文讲到的hashCode()函数该干的事情。第二个步骤就是将上一步得到的32位int类型数进行映射到0~(M-1)的一个数，这个数就用来作为index。比如wikipedia里就有如下表述方式：
 
 - Given a key, the algorithm computes an index that suggests where the entry can be found:
 
@@ -81,7 +81,7 @@ All Java classes inherit a method hashCode(),which return a 32-bit int.一般默
 	
 所以，总结之，一般来说都有两个步骤，第一个步骤得到原始key的hash值，第二个步骤便是利用这个hash值进行映射，映射称为最终的index，然后再在这个index下存储相应的value。
 
-![Hash bug](../images/hash_code.JPG)
+![Hash bug](../images/hash_bug.JPG)
 
 上图中为什么会存在这些bug？首先hashCode()函数得到的是一个32位的int，因而是一个处于-2^31至2^31-1的整数。这个数有可能为负，因此进行求余操作后可能会得到负数，用这个作为index显然不行。（注意：Java中的负数进行求余会得到负数，但是python里似乎得到的是正数）那个1-in-a-billion bug 实际原因是当得到的hashcode是-2^31的时候，得到的绝对值已经无法用integer来表示了。integer的最大值是2^31-1，无法去表示-2^31.
 
