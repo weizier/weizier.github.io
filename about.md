@@ -7,12 +7,12 @@ permalink: /about/
 
 ## More Information
 
-####Machine Learning pseudoGeek!
+Machine Learning pseudoGeek!
 
 ## Contact me
 
-####Email:[xuweimdm@gmail.com](mailto:xuweimdm@gmail.com)
+Email:[xuweimdm@gmail.com](mailto:xuweimdm@gmail.com)
 
-####GitHub:[weizier](https://github.com/weizier)
+GitHub:[weizier](https://github.com/weizier)
 
-####Sina:[Mr许维](http://weibo.com/u/2053318977/ "http://weibo.com/u/2053318977/")
+Sina:[Mr许维](http://weibo.com/u/2053318977/ "http://weibo.com/u/2053318977/")
