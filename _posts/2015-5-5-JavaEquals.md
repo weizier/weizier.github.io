@@ -7,6 +7,6 @@ title: equals() and '==' in Java
 
 下面的摘自于[StackOverflow中的回答](http://stackoverflow.com/questions/7520432/java-vs-equals-confusion)
 
-- if a class does not override the equals method, then it defaults to the equals(Object o) method of the closest parent class that has overridden this method.
-- If no parent classes have provided an override, then it defaults to the method from the ultimate parent class, Object, and so you're left with the Object#equals(Object o) method. Per the Object API this is the same as ==; that is, it returns true if and only if both variables refer to the same object, if their references are one and the same. Thus you will be testing for object equality and not functional equality.
-- Always remember to override hashCode if you override equals so as not to "break the contract". As per the API, the result returned from the hashCode() method for two objects must be the same if their equals methods shows that they are equivalent. The converse is not necessarily true.
+> if a class does not override the equals method, then it defaults to the equals(Object o) method of the closest parent class that has overridden this method.
+> If no parent classes have provided an override, then it defaults to the method from the ultimate parent class, Object, and so you're left with the Object#equals(Object o) method. Per the Object API this is the same as ==; that is, it returns true if and only if both variables refer to the same object, if their references are one and the same. Thus you will be testing for object equality and not functional equality.
+> Always remember to override hashCode if you override equals so as not to "break the contract". As per the API, the result returned from the hashCode() method for two objects must be the same if their equals methods shows that they are equivalent. The converse is not necessarily true.
