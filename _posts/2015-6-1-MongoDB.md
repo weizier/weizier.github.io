@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MongoDB
+title: Introduction to MongoDB
 ---
 
 MongoDB是一个非关系型数据库，也就是NOSQL的代表。安装成功之后，有两个执行程序非常重要，分别是mongod.exe和mongo.exe，前者是server，后者是shell。数据文件都存放在F:/data/db文件夹下。为了方便以后我们能够轻松启动这两个文件，我们把mongod.exe和mongo.exe这两个文件所在路径添加到系统的PATH环境变量里，这样下次我们在命令行窗口直接输入mongod和mongo的时候，系统会到这两个路径下寻找是否有这两个可执行文件，从而方便我们快速启动mongdb服务。
